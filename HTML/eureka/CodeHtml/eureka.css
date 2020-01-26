@@ -1,0 +1,23 @@
+@import url('https://fonts.googleapis.com/css?family=Raleway:300,400');
+
+*{
+    box-sizing: border-box;
+    font-family: Raleway;
+    color: black;
+}
+
+body{
+    background-color:lightgray;
+    font-size: 20px;
+    font-weight: normal;
+    line-height: 1.6em; /* Space in between lines with em for measurement*/
+}
+.Header-for-page{
+    background-color: yellow;
+    margin: 0;
+}
+
+.container{
+    width: 80%; /*How big do you want it to look want to use %'s*/
+    margin:auto; /*This will even it out to be centerd*/
+}

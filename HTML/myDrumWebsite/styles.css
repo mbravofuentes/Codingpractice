@@ -1,0 +1,36 @@
+@import url('https://fonts.googleapis.com/css?family=Raleway:300,400');
+
+*{
+    box-sizing: border-box;
+    font-family: Raleway;
+    color: #777;
+}
+
+html, body{
+    margin: 0;
+    padding: 0;
+}
+
+.nav ul{
+    margin: 0;
+}
+
+.nav li{
+    display: inline;
+}
+
+.nav a{
+    display: inline-block;
+    padding: .5em;
+    color: white;
+    text-decoration: none;
+
+}
+
+.main_header{
+    background-color: rgba(0, 0, 0, 0);
+    background-image: url(images/drumHeader.jpg);
+    background-blend-mode: soft-light;
+    background-size: cover;
+    padding-bottom: 150px;
+}
