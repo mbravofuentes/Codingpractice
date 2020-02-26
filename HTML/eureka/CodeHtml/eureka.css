@@ -18,6 +18,11 @@ body{
 }
 
 .container{
-    width: 80%; /*How big do you want it to look want to use %'s*/
-    margin:auto; /*This will even it out to be centerd*/
+    width: 100%; /*How big do you want it to look want to use %'s*/
+    margin: auto; /*This will even it out to be centerd*/
+}
+
+.row{
+    padding-top: 30px;
+    padding-bottom: 20px;
 }

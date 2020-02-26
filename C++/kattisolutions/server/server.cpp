@@ -1,15 +1,27 @@
 #include <iostream>
+#include <array>
 
 using namespace std;
 
 int main()
 {
-  int n = 4;
-  int sum = 0;
-  for (int i=1; i<=n; i++){
-    for (int j=1; j<=n; j++)
-    {
-      cout << sum++ << " ";
+  int tasks, time;
+
+  cin >> tasks >> time;
+  int arr[tasks];
+
+  for (int i = 0; i < tasks; i++){
+    cin >> arr[i];
+  }
+  int count = 0, sum = 0;
+
+  for(int i = 0; i < tasks; i++){
+    sum += arr[i];
+    if (sum <= time){
+      count++;
     }
-    }
+  }
+
+  cout << count << endl;
+  return 0;
 }

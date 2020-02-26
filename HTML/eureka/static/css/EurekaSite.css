@@ -1,0 +1,212 @@
+.richtext-image.full-width {
+	margin-top: -12px;
+	margin-bottom: 25px;
+	height: auto;
+	padding: 4px;
+	background-color: #fff;
+	border: 1px solid #ddd;
+	border-radius: 4px;
+	transition: all .2s ease-in-out;
+	width: 100%;
+}
+
+.content-centered {
+	display: flex;
+	justify-content: center;
+}
+
+/*icons from the richtext editor have text stored in them for db purposes
+this text should not be shown but the icon still needs to be displayed.
+the icon itself is stored in the ::before */
+.richtext-fa-icon {
+	font-size: 0 !important
+}
+
+.richtext-fa-icon::before {
+	font-size: initial !important;
+	padding: 4px;
+}
+
+.block-heading {
+	font-weight: bold;
+	font-size: 1.5em;
+}
+
+.block-table {
+	width: 100%;
+	display: inline-block;
+}
+
+.block-table tr,
+td,
+th {
+	padding: 8px !important;
+	border: 2px solid gainsboro;
+}
+
+.block-bluebutton {
+	display: inline-block;
+	margin: 2px;
+}
+
+
+.block-table thead tr:nth-child(odd) {
+	background-color: #f9f9f9;
+}
+
+.block-table tbody tr:nth-child(even) {
+	background-color: #f9f9f9;
+}
+
+.donation-input,
+.donation-select {
+	margin-bottom: 10px;
+	padding: 15px;
+	border-radius: 3px;
+	border: 1px solid #ccc;
+	width: 100%;
+}
+
+.donation-input.error-input,
+.donation-select.error-input {
+	border: 1px solid red;
+}
+
+.donation-submit-column {
+	text-align: center;
+}
+
+#braintree-dropin-ui {
+	text-align: left;
+}
+
+.donation-container {
+	text-align: center;
+}
+
+.donation-tier.row {
+	margin: 0;
+}
+.donation-tier:nth-of-type(5n) {
+	background-color: rgba(240, 248, 255, 0.8);
+}
+
+.donation-tier:nth-of-type(5n+1) {
+	background-color: rgba(240, 248, 255, 0.6);
+}
+
+.donation-tier:nth-of-type(5n+2) {
+	background-color: rgba(240, 248, 255, 0.4);
+}
+
+.donation-tier:nth-of-type(5n+3) {
+	background-color: rgba(240, 248, 255, 0.2);
+}
+
+.donation-tier:nth-of-type(5n+4) {
+	background-color: white;
+}
+
+.tier-heading {
+	width: 100%;
+	text-align: center;
+}
+
+.block-portfoliocard {
+	vertical-align: top;
+	display: inline-block;
+	padding-left: 15px;
+	padding-right: 15px;
+}
+
+/* mixin for multiline */
+.portfolio-card h3 {
+	overflow: hidden;
+	position: relative;
+	line-height: 1em;
+	max-height: 3em;
+	text-align: center;
+	margin-right: -0.8em;
+	padding-right: 0.8em;
+}
+
+.portfolio-card h4 small {
+	display: block;
+	overflow: hidden;
+	position: relative;
+	line-height: 1em;
+	max-height: 2em;
+	text-align: center;
+	margin-right: -0.8em;
+	padding-right: 0.8em;
+}
+
+.portfolio-card h3:before,
+.portfolio-card h4 small:before {
+	content: '';
+	position: absolute;
+	right: 0;
+	bottom: 0;
+}
+
+.portfolio-card h3:after,
+.portfolio-card h4 small:after {
+	content: '';
+	position: absolute;
+	right: 0;
+	width: 1em;
+	height: 1em;
+	margin-top: 0.2em;
+
+}
+
+.panel {
+	margin-bottom: 20px;
+	background-color: #fff;
+	border: 1px solid transparent;
+	border-radius: 4px;
+	-webkit-box-shadow: 0 1px 1px rgba(0,0,0,.05);
+	box-shadow: 0 1px 1px rgba(0,0,0,.05);
+}
+
+.block-donor-list,
+.block-portfoliocard,
+.block-iframe,
+.block-thumbnailcard {
+	margin-bottom: 12px;
+}
+
+
+.donation-tier.row .tier-heading {
+	margin-top: 12px;
+}
+.donation-tier.row .donor-name {
+	margin-bottom: 12px;
+}
+
+.block-splitpanel .row .block-paragraph {
+	padding-top: 12px;
+}
+
+
+@media screen and (min-width: 1200px) {
+	.block-portfoliocard {
+		max-width: calc(16.66666667% - 3px);
+	}
+}
+@media screen and (max-width: 1200px) {
+	.block-portfoliocard {
+		max-width: calc(16.66666667% - 3px);
+	}
+}
+@media screen and (max-width: 991px) {
+	.block-portfoliocard {
+		max-width: calc(33.333337% - 3px);
+	}
+}
+
+@media screen and (max-width: 769px) {
+	.block-portfoliocard {
+		max-width: calc(50% - 3px);
+	}
+}

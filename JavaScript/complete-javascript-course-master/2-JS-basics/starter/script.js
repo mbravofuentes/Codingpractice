@@ -176,7 +176,7 @@ switch(true){
 
   /**
    * Arrays
-   */
+   *
   var names = ['Mario', 'Mark', 'Jane'];
   var years = new Array(1990, 1969, 2003);
 
@@ -186,4 +186,38 @@ switch(true){
   names[1] = 'Max';
   console.log(names);
   names[5] = 'Mary';
+  console.log(names);
+  // To Add to array
+  names.push('Mario');
+  names.unshift('Mr.');
   console.log(names)
+  //To remove 
+  names.pop();
+  names.pop();
+  names.shift();
+  console.log(names);
+
+  console.log(names.indexOf('Mario'));
+*/
+/**
+ * Objects
+ */
+
+ var John = {
+    fullName: 'John Mark',
+    mass: 50,
+    height: 140,
+
+    calcBMI: function(){
+       this.BMI = this.mass/(this.height * this.height);
+    }  
+ }
+
+ var Mark = {
+    fullName: 'Marc John',
+    mass: 78,
+    height: 140
+ }
+
+ var x = John.calcBMI();
+ console.log(x);

@@ -3,29 +3,13 @@
 using namespace std;
 
 
-int rotateLeft(int arr[], int n, int d)
+void rotateLeft(int arr[], int n)
 {
-  int size = n;
-  int rotArr[size], i;
-  int rotate_index = d;
-  while (rotate_index < size)
-  {
-    rotArr[i] = arr[rotate_index];
-    i++;
-    rotate_index++;
+  int temp = arr[0];
+  for (int i = 0; i < n; i++){
+    arr[i]= arr[i +1];
   }
- rotate_index = 0;
-  while(rotate_index < d)
-  {
-    rotArr[i] = arr[rotate_index];
-    i++;
-    rotate_index++;
-  }
- for (int i = 0; i < n; i++)
-  {
-    cout << rotArr[i] << " ";
-  }
-  return 0;
+  arr[n-1] = temp;
 }
 
 
@@ -38,7 +22,12 @@ int main()
    {
      cin >> arr[i];
    }
+  for (int i = 0; i < d; i++){
+    rotateLeft(arr, n);
+  }
 
-   rotateLeft(arr, n, d);
+  for (int i = 0; i < n; i++){
+    cout << arr[i] << " ";
+  }
    return 0;
 }
